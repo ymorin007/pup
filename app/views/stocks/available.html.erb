@@ -1,0 +1,35 @@
+<%- model_class = Stock -%>
+<div class="page-header">
+  <h1><span class="icon-briefcase"></span> New Stock</h1>
+</div>
+
+<p class="row">
+
+<p>SEE WHAT WE HAVE IN STORE FOR YOU!</p>
+	
+<table class="table table-striped">
+	<thead>
+	  <tr>
+	    <th>Pictures</th>
+	    <th>Name</th>
+	    <th>Description</th>
+	    <th>Quantity</th>
+	    <th></th>
+	  </tr>
+	</thead>
+	<tbody>
+    <% @stocks.each do |stock| %>
+      <tr>
+	    <td><%= image_tag("ringneck.jpg") %></td>
+	    <td><%= stock.name %></td>
+	    <td><%= stock.description %></td>
+	    <td><%= stock.quantity %></td>
+	    <td><%= link_to "View", view_stock_path(stock), :class => 'btn btn-mini' %>
+		</td>
+      </tr>
+    <% end %>		
+	  <tr>
+	  </tr>	
+	</tbody>
+</table>
+</p>
