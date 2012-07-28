@@ -15,7 +15,9 @@ Pup::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  # Heroku requires thats
+  # http://vincentopensourcetaiwan.blogspot.com/2012/07/heroku-actionviewtemplateerror.html
+  config.assets.compile = true
 
   # Generate digests for assets URLs
   config.assets.digest = true
