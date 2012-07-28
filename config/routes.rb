@@ -71,5 +71,6 @@ Pup::Application.routes.draw do
   match 'contact' => 'guests#contact', :as => :contact
   match 'stocks_admin' => 'stocks#index', :as => :stocks_admin  
   match 'stocks_available' => 'stocks#available', :as => :stocks_available
+  match 'view_stock' => 'stocks#view', :as => :view_stock
 
 end
